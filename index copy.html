@@ -1,217 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HearTimes Audiology Clinic - Professional Hearing Care</title>
-    <style>
-        :root {
-            --primary-color: #2c5282;
-            --secondary-color: #4299e1;
-            --text-color: #2d3748;
-            --light-bg: #f7fafc;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HearTimes Audiology Clinic</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    </head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold">HearTimes</span>
+                <span class="text-orange-400 ml-2">Audiology Clinic</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="hover:text-orange-300">Services</a>
+                <a href="#about" class="hover:text-orange-300">About</a>
+                <a href="#contact" class="hover:text-orange-300">Contact</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden px-4 py-2">
+            <a href="#services" class="block py-2">Services</a>
+            <a href="#about" class="block py-2">About</a>
+            <a href="#contact" class="block py-2">Contact</a>
+        </div>
+    </nav>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        .header {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        .hero {
-            background-color: var(--light-bg);
-            padding: 8rem 0 4rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .section {
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .doctor-profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .doctor-profile img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            margin-top: 2rem;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: var(--secondary-color);
-        }
-
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <div class="container nav">
-            <div class="logo">HearTimes</div>
-            <nav class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Premium Hearing Aid Clinic in Delhi-NCR</h1>
+                    <p class="text-xl mb-8">Experience excellence in audiology care</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-white text-blue-800 rounded-lg px-6 py-3 font-semibold">
+                            Rating: 4.9/5 ⭐
+                        </div>
+                        <span>381+ Reviews</span>
+                    </div>
+                    <a href="#contact" class="inline-block mt-8 bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition">
+                        Book Appointment
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <img src="profile.jpeg" alt="Modern hearing aid" class="rounded-lg shadow-xl">
+                </div>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Welcome to HearTimes Audiology Clinic</h1>
-            <p>Professional hearing care services with state-of-the-art facilities and experienced audiologists</p>
-            <a href="#contact" class="cta-button">Book an Appointment</a>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <div class="doctor-profile">
-                <img src="/api/placeholder/200/200" alt="Dr. S M Tarique">
-                <h3>Dr. S M Tarique</h3>
-                <p>PhD in Public Health, SHUATS</p>
-                <p>Dr. Tarique holds bachelor's & master's degrees from ALI Yavar Jung National Institute of Hearing handicapped, New Delhi and Kolkata. He has published numerous research papers in the field of hearing care and leads our team of qualified audiologists.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Hearing Assessment</h3>
-                    <p>Comprehensive hearing evaluations using latest calibrated instruments for accurate diagnosis.</p>
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 border rounded-lg hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">🎧</div>
+                    <h3 class="text-xl font-semibold mb-2">Hearing Aids</h3>
+                    <p class="text-gray-600">Professional fitting and programming of hearing aids</p>
                 </div>
-                <div class="service-card">
-                    <h3>Digital Hearing Aids</h3>
-                    <p>Access to all major digital hearing aid brands, customized to your specific needs.</p>
+                <div class="p-6 border rounded-lg hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">🔊</div>
+                    <h3 class="text-xl font-semibold mb-2">Cochlear Implant</h3>
+                    <p class="text-gray-600">Advanced cochlear implant solutions</p>
                 </div>
-                <div class="service-card">
-                    <h3>Professional Care</h3>
-                    <p>Treatment by RCI registered audiologists following international standards.</p>
+                <div class="p-6 border rounded-lg hover:shadow-lg transition">
+                    <div class="text-blue-600 mb-4">🌀</div>
+                    <h3 class="text-xl font-semibold mb-2">Vertigo Management</h3>
+                    <p class="text-gray-600">Comprehensive vertigo treatment and care</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 HearTimes Audiology Clinic. All rights reserved.</p>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8">Why Choose Us?</h2>
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-500">✓</span>
+                        <p class="text-gray-700">Patient centric practice with adequate time spent</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-500">✓</span>
+                        <p class="text-gray-700">Appointment based consultation</p>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <span class="text-green-500">✓</span>
+                        <p class="text-gray-700">Practice based on Audiological Standards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Visit Our Clinics</h2>
+            
+            <!-- Locations Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Delhi Location -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">Delhi Clinic</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-blue-600 mt-1">📍</span>
+                            <div>
+                                <p class="font-semibold">HearTimes</p>
+                                <p class="text-gray-600">1st Floor, Suniye NGO,</p>
+                                <p class="text-gray-600">Building opposite to House number 828,</p>
+                                <p class="text-gray-600">Type 1 quarters, sector 2,</p>
+                                <p class="text-gray-600">RK Puram, New Delhi 110022</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="text-blue-600">📞</span>
+                            <p class="text-gray-600">8447867816</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gurugram Location -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600">Gurugram Clinic</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-blue-600 mt-1">📍</span>
+                            <div>
+                                <p class="text-gray-600">Second Floor, A1/231,</p>
+                                <p class="text-gray-600">Golf course road,</p>
+                                <p class="text-gray-600">Sushant Lok 2, Sector 55,</p>
+                                <p class="text-gray-600">Gurugram, Haryana 122011</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">Book an Appointment</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-blue-600">📧</span>
+                            <div>
+                                <p class="font-semibold">Email Us</p>
+                                <p>heartimesclinic@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2">Working Hours</h4>
+                            <p class="text-gray-600">Monday - Saturday: 10:00 AM - 7:00 PM</p>
+                            <p class="text-gray-600">Sunday: Closed</p>
+                        </div>
+                    </div>
+                    <form id="contactForm" class="bg-gray-100 p-6 rounded-lg">
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Your Name" class="w-full p-2 border rounded" required>
+                            <input type="email" placeholder="Your Email" class="w-full p-2 border rounded" required>
+                            <input type="tel" placeholder="Your Phone" class="w-full p-2 border rounded" required>
+                            <select class="w-full p-2 border rounded" required>
+                                <option value="">Select Location</option>
+                                <option value="delhi">Delhi Clinic</option>
+                                <option value="gurugram">Gurugram Clinic</option>
+                            </select>
+                            <textarea placeholder="Message" class="w-full p-2 border rounded h-24"></textarea>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+                                Book Appointment
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">HearTimes</h3>
+                    <p class="text-gray-400">Professional audiology services with state-of-the-art technology</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 text-gray-400">
+                        <a href="#" class="hover:text-white">Facebook</a>
+                        <a href="#" class="hover:text-white">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2024 HearTimes Audiology Clinic. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll for navigation links
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -221,14 +236,11 @@
             });
         });
 
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            } else {
-                header.style.backgroundColor = 'white';
-            }
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will contact you soon!');
+            this.reset();
         });
     </script>
 </body>
