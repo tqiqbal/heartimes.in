@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HearTimes Audiology Clinic</title>
+        <title>HearTimes | Best Audiologist in Gurugram, Delhi NCR | Hearing Aids</title>
+        <meta name="description" content="HearTimes - Top-rated audiologist clinic in Gurugram, Delhi NCR. Expert hearing tests, hearing aids, and audiology services by certified audiologists. Book your appointment today!">
+        <meta name="keywords" content="audiologist, best audiologist in gurugram, audiologist in delhi, hearing clinic delhi ncr, hearing aids, hearing test, ear doctor, hearing specialist">
+        <link rel="canonical" href="https://heartimes.in">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
@@ -78,7 +81,29 @@
             }
             .hover-card:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            /* Button animations */
+            button, a {
+                transition: all 0.3s ease;
+            }
+            
+            /* Add pulsing effect to CTA buttons */
+            .pulse-on-hover:hover {
+                animation: pulse 1.5s infinite;
+            }
+            
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+                }
+                70% {
+                    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+                }
             }
             /* Testimonial slider specific styles */
             .testimonials-slider {
@@ -96,7 +121,51 @@
                 }
             }
         </style>
-    </head>
+        <!-- Schema.org markup for better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "HearTimes Audiology Clinic",
+      "image": "logo.png",
+      "@id": "https://heartimes.in",
+      "url": "https://heartimes.in",
+      "telephone": "8447867816",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "HearTimes Clinic",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.4595,
+        "longitude": 77.0266
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/heartimes",
+        "https://www.instagram.com/heartimes"
+      ],
+      "medicalSpecialty": "Audiology"
+    }
+    </script>
+</head>
     <body class="font-sans antialiased text-gray-800">
         <!-- Header -->
         <header class="fixed w-full bg-white shadow-sm z-50">
@@ -110,6 +179,7 @@
                         <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 smooth-transition">Services</a>
                         <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 smooth-transition">About</a>
                         <a href="#testimonials" class="nav-link text-gray-700 hover:text-blue-600 smooth-transition">Testimonials</a>
+                        <a href="#faq" class="nav-link text-gray-700 hover:text-blue-600 smooth-transition">FAQs</a>
                         <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 smooth-transition">Contact</a>
                     </nav>
                 
@@ -126,6 +196,7 @@
                     <a href="#services" class="block py-3 text-gray-700 hover:text-blue-600 smooth-transition">Services</a>
                     <a href="#about" class="block py-3 text-gray-700 hover:text-blue-600 smooth-transition">About</a>
                     <a href="#testimonials" class="block py-3 text-gray-700 hover:text-blue-600 smooth-transition">Testimonials</a>
+                    <a href="#faq" class="block py-3 text-gray-700 hover:text-blue-600 smooth-transition">FAQs</a>
                     <a href="#contact" class="block py-3 text-gray-700 hover:text-blue-600 smooth-transition">Contact</a>
                 </nav>
             </div>
@@ -135,15 +206,15 @@
         <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white pt-32 pb-20 md:pt-40 md:pb-32">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Hearing Aid Clinic in Delhi-NCR</h1>
-                    <p class="text-xl md:text-2xl mb-8">Experience excellence in audiology care with personalized solutions</p>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Best Audiologist Clinic in Gurugram, Delhi-NCR</h1>
+                    <p class="text-xl md:text-2xl mb-8">Certified audiologists providing expert hearing tests and hearing aid solutions in Delhi, Gurugram & NCR</p>
                     
                     <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-10">
                         <div class="bg-white text-blue-800 rounded-lg px-8 py-4 font-semibold flex items-center gap-2">
                             <span class="text-2xl">⭐</span>
                             <div class="text-left">
                                 <div class="text-xl font-bold">4.9/5 Rating</div>
-                                <div class="text-sm text-blue-600">Based on 783+ Reviews</div>
+                                <div class="text-sm text-blue-600">Based on 787+ Reviews</div>
                             </div>
                         </div>
                         
@@ -157,10 +228,13 @@
                     </div>
         
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="tel:8447867816" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 font-semibold text-lg">
+                        <a href="tel:8447867816" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 font-semibold text-lg pulse-on-hover" aria-label="Call our clinic">
                             📞 Call Now: 8447867816
                         </a>
-                        <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-800 transition transform hover:scale-105 font-semibold text-lg">
+                        <a href="https://wa.me/918447867816" target="_blank" class="inline-block bg-green-500 text-white px-8 py-4 rounded-lg hover:bg-green-600 transition transform hover:scale-105 font-semibold text-lg" aria-label="Chat on WhatsApp">
+                            💬 WhatsApp Chat
+                        </a>
+                        <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-800 transition transform hover:scale-105 font-semibold text-lg" aria-label="Visit our clinic locations">
                             📍 Visit Our Clinic
                         </a>
                     </div>
@@ -171,19 +245,19 @@
         <!-- New Photo Gallery Section -->
         <section class="section-padding bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Our Gallery</h2>
+                <h2 class="text-3xl font-bold text-center mb-12">Top Audiology Clinic in Delhi-NCR - Gallery</h2>
                 <div class="my-slider">
                     <div class="px-2">
-                        <img src="gal-1.jpeg" alt="Clinic Interior" class="rounded-lg shadow-md hover-card">
+                        <img src="gal-1.jpeg" alt="Best Audiologist Clinic Interior in Delhi NCR" class="rounded-lg shadow-md hover-card">
                     </div>
                     <div class="px-2">
-                        <img src="gal-2.jpeg" alt="Treatment Room" class="rounded-lg shadow-md hover-card">
+                        <img src="gal-2.jpeg" alt="Audiology Treatment Room in Gurugram Clinic" class="rounded-lg shadow-md hover-card">
                     </div>
                     <div class="px-2">
-                        <img src="gal-3.jpeg" alt="Modern Equipment" class="rounded-lg shadow-md hover-card">
+                        <img src="gal-3.jpeg" alt="Modern Hearing Test Equipment - Top Audiologists in Delhi" class="rounded-lg shadow-md hover-card">
                     </div>
                     <div class="px-2">
-                        <img src="gal-4.jpeg" alt="Patient Care" class="rounded-lg shadow-md hover-card">
+                        <img src="gal-4.jpeg" alt="Audiologist Patient Care in Delhi-NCR HearTimes Clinic" class="rounded-lg shadow-md hover-card">
                     </div>
                 </div>
             </div>
@@ -192,209 +266,493 @@
         <!-- Services Section -->
         <section id="services" class="section-padding bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="p-6 border rounded-lg hover-card">
-                        <div class="text-blue-600 mb-4 text-4xl">🎧</div>
-                        <h3 class="text-xl font-semibold mb-2">Hearing Aids</h3>
-                        <p class="text-gray-600">Professional fitting and programming of hearing aids with personalized care and attention.</p>
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Audiology Services in Delhi-NCR</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive hearing healthcare services provided by certified audiologists</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-10 lg:gap-12 max-w-6xl mx-auto">
+                    <div class="p-10 bg-white rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 text-blue-600 mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <span class="text-4xl">🎧</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">Advanced Hearing Aids in Gurugram</h3>
+                        <p class="text-gray-600 mb-8 text-lg leading-relaxed">Professional fitting and programming of premium hearing aids with personalized care and ongoing support. We offer the latest technology from leading manufacturers.</p>
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors text-lg">
+                                Book Consultation
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="p-6 border rounded-lg hover-card">
-                        <div class="text-blue-600 mb-4 text-4xl">🔊</div>
-                        <h3 class="text-xl font-semibold mb-2">Cochlear Implant</h3>
-                        <p class="text-gray-600">Advanced cochlear implant solutions with expert guidance and support.</p>
+                    <div class="p-10 bg-white rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 text-blue-600 mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <span class="text-4xl">🔊</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">Cochlear Implant Services</h3>
+                        <p class="text-gray-600 mb-8 text-lg leading-relaxed">Complete cochlear implant solution from evaluation to post-implantation mapping and rehabilitation. Our specialists work with leading CI manufacturers for optimal outcomes.</p>
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors text-lg">
+                                Book Consultation
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="p-6 border rounded-lg hover-card">
-                        <div class="text-blue-600 mb-4 text-4xl">🌀</div>
-                        <h3 class="text-xl font-semibold mb-2">Vertigo Management</h3>
-                        <p class="text-gray-600">Comprehensive vertigo treatment and care using latest techniques.</p>
+                    <div class="p-10 bg-white rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-blue-100 text-blue-600 mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <span class="text-4xl">🌀</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">Vestibular & Balance Disorders</h3>
+                        <p class="text-gray-600 mb-8 text-lg leading-relaxed">Comprehensive assessment and management of vertigo, dizziness and balance disorders using advanced diagnostic techniques and personalized treatment plans.</p>
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="#contact" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors text-lg">
+                                Book Consultation
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </a>
+                        </div>
                     </div>
+                </div>
+                
+                <div class="mt-20 text-center">
+                    <a href="#contact" class="inline-block bg-blue-600 text-white px-10 py-5 rounded-lg hover:bg-blue-700 transition transform hover:scale-105 font-semibold text-lg shadow-lg">
+                        View All Audiology Services
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section-padding bg-gray-50">
+        <section id="about" class="section-padding bg-gradient-to-b from-gray-50 to-white">
             <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover-card">
-                            <span class="text-green-500 text-2xl">✓</span>
-                            <div>
-                                <h3 class="font-semibold mb-2">Patient-Centric Practice</h3>
-                                <p class="text-gray-700">We ensure adequate time is spent with each patient to understand their needs thoroughly.</p>
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl font-bold mb-4">Why Choose HearTimes Audiologists?</h2>
+                    <p class="text-xl text-gray-600">Trusted by patients across Delhi-NCR for exceptional hearing care</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <div class="bg-white p-10 rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="flex items-center mb-8">
+                            <div class="flex-shrink-0 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-green-500 transition-colors duration-300">
+                                <svg class="w-8 h-8 text-green-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
+                            <h3 class="text-2xl font-bold group-hover:text-green-600 transition-colors duration-300">Patient-Centric Practice</h3>
                         </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover-card">
-                            <span class="text-green-500 text-2xl">✓</span>
-                            <div>
-                                <h3 class="font-semibold mb-2">Appointment Based</h3>
-                                <p class="text-gray-700">Structured consultation process to provide focused attention to each patient.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover-card">
-                            <span class="text-green-500 text-2xl">✓</span>
-                            <div>
-                                <h3 class="font-semibold mb-2">Professional Standards</h3>
-                                <p class="text-gray-700">Our practice strictly adheres to international Audiological Standards.</p>
-                            </div>
-                        </div>
+                        <p class="text-gray-700 text-lg ml-16 leading-relaxed">We dedicate adequate time for each patient consultation, ensuring your needs are thoroughly understood and addressed. Our audiologists take the time to listen and develop personalized care plans.</p>
                     </div>
+                    
+                    <div class="bg-white p-10 rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="flex items-center mb-8">
+                            <div class="flex-shrink-0 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-green-500 transition-colors duration-300">
+                                <svg class="w-8 h-8 text-green-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold group-hover:text-green-600 transition-colors duration-300">Appointment Based</h3>
+                        </div>
+                        <p class="text-gray-700 text-lg ml-16 leading-relaxed">Our structured consultation process ensures each patient receives focused attention without long waiting times. Book your convenient time slot and experience efficient, personalized care.</p>
+                    </div>
+                    
+                    <div class="bg-white p-10 rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="flex items-center mb-8">
+                            <div class="flex-shrink-0 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-green-500 transition-colors duration-300">
+                                <svg class="w-8 h-8 text-green-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold group-hover:text-green-600 transition-colors duration-300">Professional Standards</h3>
+                        </div>
+                        <p class="text-gray-700 text-lg ml-16 leading-relaxed">Our practice strictly adheres to international audiological standards and best practices. We maintain the highest level of professional ethics and continuously update our skills with ongoing education.</p>
+                    </div>
+                    
+                    <div class="bg-white p-10 rounded-xl shadow-lg hover-card group transition-all duration-300">
+                        <div class="flex items-center mb-8">
+                            <div class="flex-shrink-0 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-6 group-hover:bg-green-500 transition-colors duration-300">
+                                <svg class="w-8 h-8 text-green-600 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold group-hover:text-green-600 transition-colors duration-300">Advanced Technology</h3>
+                        </div>
+                        <p class="text-gray-700 text-lg ml-16 leading-relaxed">We utilize the latest diagnostic equipment and offer cutting-edge hearing solutions from world-leading manufacturers, ensuring you receive the best possible outcomes for your hearing health.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-20 text-center">
+                    <a href="#testimonials" class="inline-block bg-green-600 text-white px-10 py-5 rounded-lg hover:bg-green-700 transition transform hover:scale-105 font-semibold text-lg shadow-lg">
+                        See What Our Patients Say
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Doctor Profile Section -->
-        <section class="py-16 bg-white">
+        <section class="py-20 bg-gradient-to-b from-white to-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">KNOW YOUR SPECIALIST</h2>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 md:order-1">
-                        <h2 class="text-3xl font-bold mb-6">Dr. S M Tarique</h2>
-                        <h3 class="text-xl text-blue-600 mb-4">Senior Audiologist</h3>
-                        <div class="space-y-4 text-gray-700">
-                            <div class="space-y-3">
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">🎓</span>
-                                    <span>BASLP (AYJNIHH, Delhi- Govt. of India)</span>
+                <div class="max-w-3xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">Meet Our Award-Winning Audiologists</h2>
+                    <p class="text-xl text-gray-600">Qualified experts providing exceptional hearing care across Delhi-NCR</p>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden max-w-5xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center order-2 md:order-1">
+                            <div class="mb-8">
+                                <h3 class="text-3xl font-bold mb-2 text-blue-800">Dr. S M Tarique</h3>
+                                <div class="flex items-center mb-6">
+                                    <div class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full mr-3">Senior Audiologist</div>
+                                    <div class="bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">12+ Years Experience</div>
                                 </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">🎓</span>
-                                    <span>MASLP (AYJNIHH, Kolkata - Govt. of India)</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">🎓</span>
-                                    <span>PhD (SHUATS, Allahabad)</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">⭐</span>
-                                    <span>Experience of 12+ Years</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">🏥</span>
-                                    <span>Formerly at Army Hospital (R&R), National Audiology trainer with Sonova India (Manufacturer of Phonak & Unitron hearing aids and Advance Bionics Cochlear Implant)</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">🏆</span>
-                                    <span>Awarded Best Audiologist—National Level 2021</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">👨‍⚕️</span>
-                                    <span>EC Member, Chair Private Practitioners in Audiology (2023-2025) in Indian Speech & Hearing Association (ISHA)</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">👨‍💼</span>
-                                    <span>President Elect- Delhi branch of ISHA (2024-2026)</span>
-                                </div>
-                                <div class="flex items-start space-x-2">
-                                    <span class="text-blue-600">📚</span>
-                                    <span>10+ researches and publications on clinical practice and hearing aids</span>
+                                <div class="flex items-center mb-6">
+                                    <div class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">
+                                        <span class="mr-1">🏆</span> Best Audiologist—National Level 2021
+                                    </div>
                                 </div>
                             </div>
+                            
+                            <div class="space-y-4 text-gray-700">
+                                <div class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-300">
+                                    <h4 class="font-bold text-blue-700 mb-2">Education & Qualifications</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            BASLP (AYJNIHH, Delhi- Govt. of India)
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            MASLP (AYJNIHH, Kolkata - Govt. of India)
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            PhD (SHUATS, Allahabad)
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-300">
+                                    <h4 class="font-bold text-blue-700 mb-2">Professional Achievements</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            EC Member, Chair Private Practitioners in Audiology (2023-2025) in Indian Speech & Hearing Association (ISHA)
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            President Elect- Delhi branch of ISHA (2024-2026)
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            National Audiology trainer with Sonova India (Phonak & Unitron hearing aids and Advance Bionics Cochlear Implant)
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            10+ researches and publications on clinical practice and hearing aids
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            Former Audiologist at Army Hospital (R&R)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <a href="#contact" class="inline-block bg-blue-600 text-white font-medium rounded-lg px-6 py-3 hover:bg-blue-700 transition-colors">
+                                    <span>Book an Appointment</span>
+                                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="order-1 md:order-2 flex justify-center">
-                        <img src="profile.jpeg" alt="Dr. S M Tarique" class="rounded-full w-80 h-80 object-cover shadow-xl border-4 border-blue-600">
-                        <!-- Make sure to replace "doctor-profile.jpg" with your actual image file name -->
+                        
+                        <div class="order-1 md:order-2 bg-blue-600 relative">
+                            <div class="absolute inset-0 bg-blue-700 opacity-20 z-10"></div>
+                            <div class="h-full flex items-center justify-center p-6 md:p-0">
+                                <img src="profile.jpeg" alt="Dr. S M Tarique - Best Audiologist in Delhi NCR" class="relative z-20 w-64 h-64 md:w-full md:h-full object-cover md:object-center shadow-2xl rounded-full md:rounded-none">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Testimonials Section -->
-        <section class="py-16 bg-gray-50">
+        <section id="testimonials" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center mb-12">What Our Patients Say</h2>
-                <div class="testimonials-slider">
-                    <div class="px-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="flex text-yellow-400 mb-2">★★★★★</div>
-                            <p class="text-gray-600 mb-4">"One of the finest clinics I ever visited. Great guidance from Dr. Tarique Sir. It's a sophisticated clinic that treats patients with utmost care."</p>
-                            <p class="font-semibold text-blue-600">- Payal Das</p>
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">What Our Patients Say</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Read testimonials from our satisfied patients across Delhi-NCR</p>
+                </div>
+                <div class="max-w-6xl mx-auto">
+                    <div class="testimonials-slider">
+                        <div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+                                <div class="absolute -top-4 -right-4 bg-yellow-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                                    <span class="text-lg font-bold">5★</span>
+                                </div>
+                                <div class="mb-8 text-gray-600 relative">
+                                    <svg class="absolute top-0 left-0 w-10 h-10 text-blue-100 transform -translate-x-4 -translate-y-4 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="text-gray-700 italic pt-6 text-lg leading-relaxed">"One of the finest clinics I ever visited. Great guidance from Dr. Tarique Sir. It's a sophisticated clinic that treats patients with utmost care."</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-5 text-lg">
+                                        PD
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-blue-800 text-lg">Payal Das</p>
+                                        <p class="text-gray-500">Delhi</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="flex text-yellow-400 mb-2">★★★★★</div>
-                            <p class="text-gray-600 mb-4">"Coming with my father 82 years old, Dr. Tarique is very attentive with great patience. Always tries to satisfy patients with his efforts."</p>
-                            <p class="font-semibold text-blue-600">- Kapil Arora</p>
+                        <div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+                                <div class="absolute -top-4 -right-4 bg-yellow-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                                    <span class="text-lg font-bold">5★</span>
+                                </div>
+                                <div class="mb-8 text-gray-600 relative">
+                                    <svg class="absolute top-0 left-0 w-10 h-10 text-blue-100 transform -translate-x-4 -translate-y-4 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="text-gray-700 italic pt-6 text-lg leading-relaxed">"Coming with my father 82 years old, Dr. Tarique is very attentive with great patience. Always tries to satisfy patients with his efforts."</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-5 text-lg">
+                                        KA
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-blue-800 text-lg">Kapil Arora</p>
+                                        <p class="text-gray-500">Gurugram</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="flex text-yellow-400 mb-2">★★★★★</div>
-                            <p class="text-gray-600 mb-4">"He is very simple and gentle in his behavior. He gave us sufficient time to address our problems and guided us in selecting the best hearing aid. Wonderful experience!"</p>
-                            <p class="font-semibold text-blue-600">- Aditya Sreenivashan</p>
+                        <div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+                                <div class="absolute -top-4 -right-4 bg-yellow-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                                    <span class="text-lg font-bold">5★</span>
+                                </div>
+                                <div class="mb-8 text-gray-600 relative">
+                                    <svg class="absolute top-0 left-0 w-10 h-10 text-blue-100 transform -translate-x-4 -translate-y-4 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="text-gray-700 italic pt-6 text-lg leading-relaxed">"He is very simple and gentle in his behavior. He gave us sufficient time to address our problems and guided us in selecting the best hearing aid. Wonderful experience!"</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-5 text-lg">
+                                        AS
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-blue-800 text-lg">Aditya Sreenivashan</p>
+                                        <p class="text-gray-500">Delhi NCR</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="flex text-yellow-400 mb-2">★★★★★</div>
-                            <p class="text-gray-600 mb-4">"Dr Tarique is good, kind, and excellent!! So glad we got hearing aids for my mom in law from him. She is happy and satisfied. Her life has been transformed. Thank you Dr Tarique."</p>
-                            <p class="font-semibold text-blue-600">- Angelica Zimik</p>
+                        <div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+                                <div class="absolute -top-4 -right-4 bg-yellow-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                                    <span class="text-lg font-bold">5★</span>
+                                </div>
+                                <div class="mb-8 text-gray-600 relative">
+                                    <svg class="absolute top-0 left-0 w-10 h-10 text-blue-100 transform -translate-x-4 -translate-y-4 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="text-gray-700 italic pt-6 text-lg leading-relaxed">"Dr Tarique is good, kind, and excellent!! So glad we got hearing aids for my mom in law from him. She is happy and satisfied. Her life has been transformed. Thank you Dr Tarique."</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-5 text-lg">
+                                        AZ
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-blue-800 text-lg">Angelica Zimik</p>
+                                        <p class="text-gray-500">Delhi</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="flex text-yellow-400 mb-2">★★★★★</div>
-                            <p class="text-gray-600 mb-4">"I'd like to appreciate Dr. Tarique's dedication for what he does. He is very good natured and hears patiently and gives the best advice. Definitely the best AUDIOLOGIST in Delhi."</p>
-                            <p class="font-semibold text-blue-600">- Harshit Gupta</p>
+                        <div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+                                <div class="absolute -top-4 -right-4 bg-yellow-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                                    <span class="text-lg font-bold">5★</span>
+                                </div>
+                                <div class="mb-8 text-gray-600 relative">
+                                    <svg class="absolute top-0 left-0 w-10 h-10 text-blue-100 transform -translate-x-4 -translate-y-4 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="text-gray-700 italic pt-6 text-lg leading-relaxed">"I'd like to appreciate Dr. Tarique's dedication for what he does. He is very good natured and hears patiently and gives the best advice. Definitely the best AUDIOLOGIST in Delhi."</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-5 text-lg">
+                                        HG
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-blue-800 text-lg">Harshit Gupta</p>
+                                        <p class="text-gray-500">Delhi</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-4">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="flex text-yellow-400 mb-2">★★★★★</div>
-                            <p class="text-gray-600 mb-4">"My experience with Dr. Tarique was really appreciable. His knowledge in the audiology field and the way he gives Hearing Aid Trial was really good. Thank you for your support."</p>
-                            <p class="font-semibold text-blue-600">- Arushi Agarwal</p>
+                        <div>
+                            <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 relative mx-4 h-full">
+                                <div class="absolute -top-4 -right-4 bg-yellow-400 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-md">
+                                    <span class="text-lg font-bold">5★</span>
+                                </div>
+                                <div class="mb-8 text-gray-600 relative">
+                                    <svg class="absolute top-0 left-0 w-10 h-10 text-blue-100 transform -translate-x-4 -translate-y-4 opacity-50" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="text-gray-700 italic pt-6 text-lg leading-relaxed">"My experience with Dr. Tarique was really appreciable. His knowledge in the audiology field and the way he gives Hearing Aid Trial was really good. Thank you for your support."</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold mr-5 text-lg">
+                                        AA
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-blue-800 text-lg">Arushi Agarwal</p>
+                                        <p class="text-gray-500">Gurugram</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-16 bg-white">
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
-                <div id="contact" class="section py-16 bg-white">
-                    <div class="container mx-auto px-4">
-                        <h2 class="text-3xl font-bold text-center mb-12">Visit Our Clinics</h2>
-                        <div class="grid md:grid-cols-2 gap-8 mb-16">
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                                <h3 class="text-xl font-bold mb-4 text-blue-600">Delhi Clinic</h3>
-                                <div class="space-y-4">
-                                    <div class="flex items-start space-x-3">
-                                        <span class="text-blue-600 mt-1">📍</span>
-                                        <div>
-                                            HearTimes<br>
-                                            1st Floor, Suniye NGO,<br>
-                                            Building opposite to House number 828,<br>
-                                            Type 1 quarters, sector 2,<br>
-                                            RK Puram, New Delhi 110022
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <span class="text-blue-600">📞</span>
-                                        <a href="tel:8447867816">8447867816</a>
-                                    </div>
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Find answers to common questions about hearing health and our services</p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-6">
+                        <button class="faq-toggle w-full flex justify-between items-center bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300" aria-expanded="false">
+                            <span class="text-xl font-semibold">How do I know if I need a hearing aid?</span>
+                            <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+                            <div class="p-5 bg-white border-t border-gray-100">
+                                <p class="text-gray-600">If you experience difficulty understanding conversations, frequently ask people to repeat themselves, or need to turn up the TV volume louder than others prefer, these could be signs of hearing loss. Our audiologists in Delhi-NCR can perform a comprehensive hearing test to determine if you might benefit from hearing aids.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <button class="faq-toggle w-full flex justify-between items-center bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300" aria-expanded="false">
+                            <span class="text-xl font-semibold">What types of hearing aids do you offer?</span>
+                            <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+                            <div class="p-5 bg-white border-t border-gray-100">
+                                <p class="text-gray-600">At HearTimes Clinic in Gurugram and Delhi-NCR, we offer a wide range of hearing aid options including behind-the-ear (BTE), in-the-ear (ITE), in-the-canal (ITC), completely-in-canal (CIC), and invisible-in-canal (IIC) styles. We also provide the latest digital and smart hearing aids with Bluetooth connectivity and smartphone control features.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <button class="faq-toggle w-full flex justify-between items-center bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300" aria-expanded="false">
+                            <span class="text-xl font-semibold">How much do hearing aids cost?</span>
+                            <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+                            <div class="p-5 bg-white border-t border-gray-100">
+                                <p class="text-gray-600">Hearing aid prices vary depending on the technology level, features, and style. At our audiology clinic, we offer options to fit various budgets, starting from basic models to premium devices with advanced features. We also provide flexible payment plans and will help you navigate any insurance coverage you may have.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <button class="faq-toggle w-full flex justify-between items-center bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all duration-300" aria-expanded="false">
+                            <span class="text-xl font-semibold">How long will my hearing aids last?</span>
+                            <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-content overflow-hidden max-h-0 transition-all duration-300">
+                            <div class="p-5 bg-white border-t border-gray-100">
+                                <p class="text-gray-600">With proper care and maintenance, most hearing aids last between 5-7 years. Our clinic offers regular maintenance services to ensure your devices remain in optimal condition. We also provide cleaning kits and instructions for daily care to maximize the lifespan of your hearing aids.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Visit Our Audiology Clinics in Delhi-NCR & Gurugram</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Book a consultation with our experienced audiologists</p>
+                </div>
+                
+                <!-- Appointment Form -->
+                <div class="max-w-2xl mx-auto mb-16 bg-blue-50 p-10 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-8 text-center text-blue-800">Book Your Hearing Consultation</h3>
+                    <form id="appointmentForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-1">Full Name*</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-1">Phone Number*</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="location" class="block text-gray-700 mb-1">Preferred Location*</label>
+                            <select id="location" name="location" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Select Clinic Location</option>
+                                <option value="delhi">Delhi Clinic</option>
+                                <option value="gurugram">Gurugram Clinic</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Tell us about your hearing concerns (optional)</label>
+                            <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="consent" name="consent" class="mr-2" required>
+                            <label for="consent" class="text-sm text-gray-700">I consent to being contacted by HearTimes Clinic regarding my appointment*</label>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold text-lg">Book Appointment</button>
+                        </div>
+                        <p class="text-sm text-gray-500 text-center">* Required fields</p>
+                    </form>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Delhi Clinic</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-blue-600 mt-1">📍</span>
+                                <div>
+                                    HearTimes<br>
+                                    1st Floor, Suniye NGO,<br>
+                                    Building opposite to House number 828,<br>
+                                    Type 1 quarters, sector 2,<br>
+                                    RK Puram, New Delhi 110022
                                 </div>
                             </div>
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-md">
-                                <h3 class="text-xl font-bold mb-4 text-blue-600">Gurugram Clinic</h3>
-                                <div class="space-y-4">
-                                    <div class="flex items-start space-x-3">
-                                        <span class="text-blue-600 mt-1">📍</span>
-                                        <div>
-                                            Second Floor, A1/231,<br>
-                                            Golf course road,<br>
-                                            Sushant Lok 2, Sector 55,<br>
-                                            Gurugram, Haryana 122011
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <span class="text-blue-600">📞</span>
-                                        <a href="tel:8447867816">8447867816</a>
-                                    </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">📞</span>
+                                <a href="tel:8447867816">8447867816</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-blue-600">Gurugram Clinic</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-blue-600 mt-1">📍</span>
+                                <div>
+                                    Second Floor, A1/231,<br>
+                                    Golf course road,<br>
+                                    Sushant Lok 2, Sector 55,<br>
+                                    Gurugram, Haryana 122011
                                 </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="text-blue-600">📞</span>
+                                <a href="tel:8447867816">8447867816</a>
                             </div>
                         </div>
                     </div>
@@ -403,38 +761,188 @@
         </section>
 
         <!-- Footer -->
-        <footer class="bg-gray-800 text-white py-8">
+        <footer class="bg-gradient-to-b from-blue-900 to-blue-950 text-white pt-16 pb-8">
             <div class="container mx-auto px-4">
-                <div class="grid md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Column 1: About -->
                     <div>
-                        <h3 class="text-xl font-bold mb-4">HearTimes</h3>
-                        <p class="text-gray-400">Professional audiology services with state-of-the-art technology</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li><a href="#services" class="hover:text-white">Services</a></li>
-                            <li><a href="#about" class="hover:text-white">About Us</a></li>
-                            <li><a href="#contact" class="hover:text-white">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                        <div class="flex space-x-4 text-gray-400">
-                            <a href="https://www.instagram.com/heartimes.ig/?hl=en" class="hover:text-white">Instagram</a>
-                            <a href="https://www.facebook.com/OnlyAudiologist/photos/" class="hover:text-white">Facebook</a>
-                            <a href="https://www.youtube.com/channel/UCONxi0jq6W5vdD-7Cz61faQ" class="hover:text-white">Youtube</a>
+                        <div class="mb-6">
+                            <img src="logo.png" alt="HearTimes Logo" class="h-12 mb-4">
+                            <p class="text-blue-200 mb-4">Leading audiology clinic in Delhi-NCR providing expert hearing healthcare since 2010.</p>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/OnlyAudiologist/photos/" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+                            </a>
+                            <a href="https://www.instagram.com/heartimes.ig/?hl=en" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.029 6.185-.484 8.549-4.385 8.816-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCONxi0jq6W5vdD-7Cz61faQ" class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+                            </a>
                         </div>
                     </div>
+                    
+                    <!-- Column 2: Quick Links -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#services" class="text-blue-200 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Our Services</a></li>
+                            <li><a href="#about" class="text-blue-200 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>About Us</a></li>
+                            <li><a href="#testimonials" class="text-blue-200 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Testimonials</a></li>
+                            <li><a href="#faq" class="text-blue-200 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>FAQs</a></li>
+                            <li><a href="#contact" class="text-blue-200 hover:text-white transition-colors flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 3: Clinic Hours -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Clinic Hours</h3>
+                        <ul class="space-y-3 text-blue-200">
+                            <li class="flex justify-between">
+                                <span>Monday - Friday:</span>
+                                <span>9:00 AM - 7:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Saturday:</span>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sunday:</span>
+                                <span>By Appointment Only</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-semibold mb-2">Emergency Contact</h4>
+                            <a href="tel:8447867816" class="text-blue-200 hover:text-white flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                                8447867816
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 4: Newsletter -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Stay Updated</h3>
+                        <p class="text-blue-200 mb-4">Subscribe to receive the latest hearing healthcare news and special offers.</p>
+                        <form class="space-y-3">
+                            <div>
+                                <input type="email" placeholder="Your Email Address" class="w-full px-4 py-2 rounded-lg bg-blue-800 border border-blue-700 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 px-4 rounded-lg transition-colors">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-                    <p>&copy; 2024 HearTimes Audiology Clinic. All rights reserved.</p>
+                
+                <!-- Divider -->
+                <div class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300">
+                    <p>&copy; 2025 Heartimes. All rights reserved.</p>
+                    <p class="mt-2 text-sm">
+                        <a href="#" class="hover:text-white">Privacy Policy</a> | 
+                        <a href="#" class="hover:text-white">Terms of Service</a> | 
+                        <a href="#" class="hover:text-white">Sitemap</a>
+                    </p>
                 </div>
+            </div>
+            
+            <!-- Back to top button -->
+            <div class="flex justify-end container mx-auto px-4 -mt-8">
+                <a href="#" class="bg-blue-600 hover:bg-blue-500 text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                </a>
             </div>
         </footer>
 
         <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Form submission handler
+            const appointmentForm = document.getElementById('appointmentForm');
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(appointmentForm);
+                    const formValues = Object.fromEntries(formData.entries());
+                    
+                    // Show loading state
+                    const submitButton = appointmentForm.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.innerHTML;
+                    submitButton.innerHTML = '<span class="animate-pulse">Submitting...</span>';
+                    submitButton.disabled = true;
+                    
+                    // Prepare data for API submission
+                    const apiData = {
+                        fullName: formValues.name,
+                        phoneNumber: formValues.phone,
+                        email: formValues.email || '',
+                        preferredLocation: formValues.location,
+                        message: formValues.message || ''
+                    };
+                    
+                    // Submit to API endpoint
+                    fetch('https://process-form-submission-572006272072.asia-south2.run.app', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(apiData)
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        const contentType = response.headers.get('content-type');
+                        if (contentType && contentType.includes('application/json')) {
+                            return response.json();
+                        } else {
+                            return response.text();
+                        }
+                    })
+                    .then(data => {
+                        // Show success message
+                        appointmentForm.innerHTML = `
+                            <div class="text-center py-8">
+                                <div class="text-green-500 text-5xl mb-4">✓</div>
+                                <h3 class="text-2xl font-bold text-blue-800 mb-2">Appointment Request Received!</h3>
+                                <p class="text-gray-600 mb-4">Thank you ${formValues.name}! We'll contact you shortly to confirm your appointment.</p>
+                                <button type="button" id="newAppointmentBtn" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all duration-300">Book Another Appointment</button>
+                            </div>
+                        `;
+                        
+                        // Add listener for the "Book Another Appointment" button
+                        document.getElementById('newAppointmentBtn').addEventListener('click', function() {
+                            window.location.reload();
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                        // Show error message but restore form
+                        submitButton.innerHTML = originalButtonText;
+                        submitButton.disabled = false;
+                        
+                        // Create error alert at top of form
+                        const errorAlert = document.createElement('div');
+                        errorAlert.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4';
+                        errorAlert.innerHTML = `
+                            <strong class="font-bold">Error!</strong>
+                            <span class="block sm:inline"> There was a problem submitting your form. Please try again or contact us directly.</span>
+                        `;
+                        appointmentForm.prepend(errorAlert);
+                        
+                        // Remove error message after 5 seconds
+                        setTimeout(() => {
+                            if (errorAlert.parentNode) {
+                                errorAlert.parentNode.removeChild(errorAlert);
+                            }
+                        }, 5000);
+                        
+                        console.error('Error submitting form:', error);
+                    });
+                });
+            }
             // Mobile menu toggle with smooth animation
             const menuButton = document.getElementById('menuButton');
             const mobileMenu = document.getElementById('mobileMenu');
@@ -521,6 +1029,26 @@
                         gutter: 30
                     }
                 }
+            });
+
+            // FAQ Accordions
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const arrow = toggle.querySelector('svg');
+                    
+                    // Toggle the current accordion
+                    toggle.setAttribute('aria-expanded', toggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+                    
+                    if (toggle.getAttribute('aria-expanded') === 'true') {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        arrow.classList.add('rotate-180');
+                    } else {
+                        content.style.maxHeight = '0';
+                        arrow.classList.remove('rotate-180');
+                    }
+                });
             });
 
             // Add active class to nav links on scroll
