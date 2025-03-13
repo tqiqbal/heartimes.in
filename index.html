@@ -857,11 +857,98 @@
 
         <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Form validation function
+            function validateForm(form) {
+                // Clear any previous error messages
+                const previousErrors = form.querySelectorAll('.error-message');
+                previousErrors.forEach(error => error.remove());
+                
+                // Reset all input borders
+                form.querySelectorAll('input, select, textarea').forEach(input => {
+                    input.classList.remove('border-red-500');
+                });
+                
+                // Get form data
+                const formData = new FormData(form);
+                const formValues = Object.fromEntries(formData.entries());
+                let isValid = true;
+                
+                // Name validation - must not be empty and only contain letters, spaces, and common name characters
+                const nameInput = form.querySelector('#name');
+                if (!formValues.name || formValues.name.trim() === '') {
+                    showError(nameInput, 'Name is required');
+                    isValid = false;
+                } else if (!/^[A-Za-z\s.'-]{2,50}$/.test(formValues.name)) {
+                    showError(nameInput, 'Please enter a valid name');
+                    isValid = false;
+                }
+                
+                // Phone validation - must be a valid format (at least 10 digits)
+                const phoneInput = form.querySelector('#phone');
+                if (!formValues.phone || formValues.phone.trim() === '') {
+                    showError(phoneInput, 'Phone number is required');
+                    isValid = false;
+                } else if (!/^[\d()\s+-]{10,15}$/.test(formValues.phone.replace(/\s/g, ''))) {
+                    showError(phoneInput, 'Please enter a valid phone number');
+                    isValid = false;
+                }
+                
+                // Email validation - must be a valid format if provided
+                const emailInput = form.querySelector('#email');
+                if (formValues.email && formValues.email.trim() !== '') {
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email)) {
+                        showError(emailInput, 'Please enter a valid email address');
+                        isValid = false;
+                    }
+                }
+                
+                // Location validation - must be selected
+                const locationInput = form.querySelector('#location');
+                if (!formValues.location || formValues.location === '') {
+                    showError(locationInput, 'Please select a clinic location');
+                    isValid = false;
+                }
+                
+                // Consent validation - must be checked
+                const consentInput = form.querySelector('#consent');
+                if (!consentInput.checked) {
+                    showError(consentInput, 'You must consent to be contacted');
+                    isValid = false;
+                }
+                
+                return isValid;
+            }
+            
+            // Helper function to show error messages
+            function showError(inputElement, message) {
+                // Mark the input as invalid
+                inputElement.classList.add('border-red-500');
+                
+                // Create and append error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+                errorDiv.innerText = message;
+                
+                // For checkbox, append after the label
+                if (inputElement.type === 'checkbox') {
+                    const parentDiv = inputElement.closest('div');
+                    parentDiv.appendChild(errorDiv);
+                } else {
+                    // For other inputs, append after the input
+                    inputElement.parentNode.appendChild(errorDiv);
+                }
+            }
+
             // Form submission handler
             const appointmentForm = document.getElementById('appointmentForm');
             if (appointmentForm) {
                 appointmentForm.addEventListener('submit', function(e) {
                     e.preventDefault();
+                    
+                    // Validate form before submission
+                    if (!validateForm(appointmentForm)) {
+                        return;
+                    }
                     
                     // Get form data
                     const formData = new FormData(appointmentForm);
